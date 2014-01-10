@@ -11,7 +11,7 @@
     }
   });
 
-  require(['app'], function () {
-    angular.bootstrap(document, ["app"]);
+  require(['webui/webui'], function (webui) {
+    webui.angular().bootstrap(document, ["app"]);
   });
 }(require));

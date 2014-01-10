@@ -1,11 +1,11 @@
-define(['angular', 'todo/ToDoController', 'angular-route' ], function (angular, ToDoController) {
+define(['angular', 'webui/ng/todo/ToDoController', 'angular-route' ], function (angular, ToDoController) {
   "use strict";
 
   var todo = angular.module("todo", ['ngRoute']);
 
   todo.config(["$routeProvider", function ($routeProvider) {
     $routeProvider.when('/', {
-      templateUrl: 'modules/todo/todo.html',
+      templateUrl: 'modules/webui/ng/todo/todo.html',
       controller: ToDoController
     });
   }]);
