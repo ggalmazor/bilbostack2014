@@ -10,7 +10,10 @@
     "angular": "1.2.x",
     "angular-route": "1.2.x",
     "almond": "0.2.x",
-    "requirejs": "2.1.x"
+    "requirejs": "2.1.x",
+    "jquery": "~2.0.3",
+    "underscore": "~1.5.2",
+    "requirejs-text": "~2.0.10"
   },
   "devDependencies": {
     "angular-mocks": "1.2.x"

@@ -1,0 +1,16 @@
+<div class="hero-unit">
+  <h1>To do list</h1>
+</div>
+
+<div class="row">
+  <div class="span12">
+    <button>Load Tasks</button>
+    <ul class="task-list">
+      <li>No tasks loaded</li>
+    </ul>
+  </div>
+</div>
+
+<script type="foo/bar" id="task">
+<li class="<%= task.isDone() ? 'done' : '' %>"><%= task.name %></li>
+</script>

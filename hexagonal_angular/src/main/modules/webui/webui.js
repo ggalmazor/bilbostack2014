@@ -1,10 +1,19 @@
-define(function (angular) {
+define(function () {
   return {
     angular: function () {
       return {
         bootstrap: function (element) {
-          require(['angular', 'webui/ng/app'], function (angular) {
-            angular.bootstrap(element, ['app']);
+          require(['webui/ng/app'], function (app) {
+            app.bootstrap(element);
+          });
+        }
+      };
+    },
+    jquery: function () {
+      return {
+        bootstrap: function (element) {
+          require(['webui/jquery/app'], function (app) {
+            app.bootstrap(element);
           });
         }
       };
