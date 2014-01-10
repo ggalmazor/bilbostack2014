@@ -7,5 +7,5 @@ define(['jQuery', 'webui/jquery/todo/ToDoController', 'text!webui/jquery/todo/to
       root.html(ToDoTemplate);
       root.find('button').on('click', ctrl.loadTasks);
     }
-  }
+  };
 });

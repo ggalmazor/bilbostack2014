@@ -1,5 +1,5 @@
 define(['jQuery', 'underscore', 'stubs/tasks'], function ($, _, tasks) {
-  "use strict";
+  'use strict';
 
   function ToDoController(root) {
     function loadTasks() {

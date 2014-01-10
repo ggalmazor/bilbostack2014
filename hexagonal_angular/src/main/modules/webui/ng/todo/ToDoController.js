@@ -1,5 +1,5 @@
 define(['stubs/tasks'], function (tasks) {
-  "use strict";
+  'use strict';
 
   function ToDoController($scope) {
     function loadTasks() {
@@ -9,6 +9,6 @@ define(['stubs/tasks'], function (tasks) {
     $scope.loadTasks = loadTasks;
   }
 
-  ToDoController.$inject = ["$scope"];
+  ToDoController.$inject = ['$scope'];
   return ToDoController;
 });

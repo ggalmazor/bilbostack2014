@@ -16,7 +16,10 @@
     }
   });
 
-  require(['webui/webui'], function (webui) {
-    webui.jquery().bootstrap(document);
+  require(['todo/todo', 'webui/webui'], function (ToDo, webui) {
+    var todo = ToDo();
+    todo.plugWebUI(webui.angular(), document);
+
+
   });
 }(require));

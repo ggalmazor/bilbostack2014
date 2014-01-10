@@ -1,4 +1,4 @@
-define(['angular', 'webui/ng/todo/ToDoController', 'angular-route'], function (angular, ToDoController, lala) {
+define(['angular', 'webui/ng/todo/ToDoController', 'angular-route'], function (angular, ToDoController) {
   'use strict';
 
   var todo = angular.module('todo', ['ngRoute']);
