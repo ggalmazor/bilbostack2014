@@ -11,10 +11,6 @@
     }
   });
 
-  allTestFiles.push("app");
-  allTestFiles.push("mocks");
-  allTestFiles.push("angular-route");
-
   require({
     // "/base" is the URL from where karma is serving project files
     baseUrl: '/base/src/main/modules',
