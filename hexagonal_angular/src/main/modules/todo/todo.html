@@ -1,0 +1,12 @@
+<div class="hero-unit">
+  <h1>To do list</h1>
+</div>
+
+<div class="row">
+  <div class="span12">
+
+    <ul>
+      <li ng-repeat="task in tasks" class="{done: task.isDone()}" ng-bind="task.name">Loading tasks...</li>
+    </ul>
+  </div>
+</div>
