@@ -58,7 +58,7 @@ define(['todo/todo', 'q', 'jasmine-as-promised', 'repo/repo'], function (Todo, Q
       var todo = Todo();
       var testAdapter = TestUI();
       var nextId = 1;
-      todo.plugWebUI(testAdapter);
+      todo.plugUi(testAdapter);
       todo.plugRepo(TestRepolandia(nextId));
 
       runs(function () {
@@ -75,7 +75,7 @@ define(['todo/todo', 'q', 'jasmine-as-promised', 'repo/repo'], function (Todo, Q
     it("cuando el nombre es vacio trololo", function() {
       var todo = Todo();
       var testAdapter = TestUI();
-      todo.plugWebUI(testAdapter);
+      todo.plugUi(testAdapter);
       todo.plugRepo(TestRepolandia(1));
 
       runs(function () {
@@ -89,7 +89,7 @@ define(['todo/todo', 'q', 'jasmine-as-promised', 'repo/repo'], function (Todo, Q
     it("Si el repo falla, eleva el error a la UI", function() {
       var todo = Todo();
       var testAdapter = TestUI();
-      todo.plugWebUI(testAdapter);
+      todo.plugUi(testAdapter);
       todo.plugRepo(FailingRepo());
 
       runs(function () {

@@ -17,9 +17,10 @@
     }
   });
 
-  require(['todo/todo', 'webui/webui', 'repo/repo'], function (ToDo, webui, repo) {
+  require(['todo/todo', 'ui/uiAdapter', 'repo/repo'], function (ToDo, webui, repo) {
     var todo = ToDo();
-    todo.plugWebUI(webui.jquery(), document);
+    //todo.plugUi(webui.jquery(), document.getElementById('root'));
+    todo.plugUi(webui.angular(), document);
     todo.plugRepo(repo.localStorage());
   });
 }(require));
