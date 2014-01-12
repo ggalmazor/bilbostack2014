@@ -97,7 +97,7 @@ List all packages and their licenses this project depends on, in case your boss 
 To get the most out of the automated build and of configured requireJS all javascript files must be
 [AMD modules](http://wiki.commonjs.org/wiki/Modules/AsynchronousDefinition)!
 
-[src/main/modules/app.js](src/main/modules/app.js) is your main entrypoint for your own code. Declare a dependency in this file
+[src/main/modules/webui.js](src/main/modules/webui.js) is your main entrypoint for your own code. Declare a dependency in this file
 to your own code and it will be automatically loaded by requireJS and will be included in the optimized javascript after
 build for production use ( *grunt install* ). Look for the AboutController dependency if you need an example.
 
@@ -115,7 +115,7 @@ So, after adding new dependencies you have to configure loading of the new files
 1. [src/main/modules/main.js](src/main/modules/main.js) - this file is used during local development, please add your dependencies
 to the existing *require.config* object: path for the file (without .js extension) and shim if this dependency needs other
 packages to be present before loading this dependency
-2. [src/test/main-test.js](src/test/main-test.js) - this file is used for test execution. It loads all your application (app.js)
+2. [src/test/main-test.js](src/test/main-test.js) - this file is used for test execution. It loads all your application (webui.js)
 and every file that ends with "Test.js" as requireJS modules automatically. You have to alter *require.config.path* and
 *require.config.path* the same way you did in *main.js*
 3. [gruntfile.js](gruntfile.js) - if you want to use a pre-minified version of your dependency you'll have to alter the

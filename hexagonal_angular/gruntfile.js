@@ -29,7 +29,8 @@ module.exports = function (grunt) {
     watch: {
       javascript: {
         files: ['<%=pkg.folders.jsSource %>' + '**/*.js'],
-        tasks: ['jshint', 'karma:development:run'],
+        //tasks: ['jshint', 'karma:development:run'],
+        tasks: ['karma:development:run'],
         options: {
           livereload: true
         }

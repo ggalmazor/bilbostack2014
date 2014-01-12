@@ -7,6 +7,9 @@ define(function () {
       name: name,
       isDone: function () {
         return !!done;
+      },
+      isValid: function() {
+        return !!name;
       }
     };
   };

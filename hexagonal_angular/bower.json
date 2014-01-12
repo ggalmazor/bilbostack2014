@@ -13,7 +13,9 @@
     "requirejs": "2.1.x",
     "jquery": "~2.0.3",
     "underscore": "~1.5.2",
-    "requirejs-text": "~2.0.10"
+    "requirejs-text": "~2.0.10",
+    "jasmine-as-promised": "~0.0.6",
+    "q": "~1.0.0"
   },
   "devDependencies": {
     "angular-mocks": "1.2.x"

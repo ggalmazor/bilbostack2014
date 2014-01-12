@@ -1,24 +1,10 @@
-define(function () {
+define(function (require) {
   'use strict';
 
   return {
-    angular: function () {
-      return {
-        bootstrap: function (element) {
-          require(['webui/ng/app'], function (app) {
-            app.bootstrap(element);
-          });
-        }
-      };
-    },
+    angular: {},
     jquery: function () {
-      return {
-        bootstrap: function (element) {
-          require(['webui/jquery/app'], function (app) {
-            app.bootstrap(element);
-          });
-        }
-      };
+      return require('webui/jquery/webui')();
     }
   };
 });

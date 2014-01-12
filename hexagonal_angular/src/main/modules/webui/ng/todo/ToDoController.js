@@ -6,7 +6,7 @@ define(['stubs/tasks'], function (tasks) {
       $scope.tasks = tasks;
     }
 
-    $scope.loadTasks = loadTasks;
+    $scope.cargarTareas = loadTasks;
   }
 
   ToDoController.$inject = ['$scope'];

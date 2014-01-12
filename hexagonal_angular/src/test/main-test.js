@@ -17,12 +17,19 @@
     paths: {
       'angular': '/base/bower_components/angular/angular',
       'angular-route': '/base/bower_components/angular-route/angular-route',
-      'mocks': '/base/bower_components/angular-mocks/angular-mocks'
+      'mocks': '/base/bower_components/angular-mocks/angular-mocks',
+      'text': '/base/bower_components/requirejs-text/text',
+      'jQuery': '/base/bower_components/jquery/jquery',
+      'underscore': '/base/bower_components/underscore/underscore',
+      'q': '../../../bower_components/q/q',
+      'jasmine-as-promised': '/base/bower_components/jasmine-as-promised/src/jasmine-as-promised'
     },
     shim: {
       'angular': { deps: [], exports: 'angular' },
       'angular-route': { deps: ['angular'], exports: 'angular-route' },
-      'mocks': { deps: ['angular'], exports: 'mocks' }
+      'mocks': { deps: ['angular'], exports: 'mocks' },
+      'jQuery': { exports: 'jQuery'},
+      'underscore': { exports: '_'}
     }
   }, allTestFiles, function () {
     window.__karma__.start();

@@ -6,7 +6,8 @@
       'angular-route': '../../../bower_components/angular-route/angular-route',
       'text': '../../../bower_components/requirejs-text/text',
       'jQuery': '../../../bower_components/jquery/jquery',
-      'underscore': '../../../bower_components/underscore/underscore'
+      'underscore': '../../../bower_components/underscore/underscore',
+      'q': '../../../bower_components/q/q'
     },
     shim: {
       'angular': { deps: [], exports: 'angular' },
@@ -16,10 +17,9 @@
     }
   });
 
-  require(['todo/todo', 'webui/webui'], function (ToDo, webui) {
+  require(['todo/todo', 'webui/webui', 'repo/repo'], function (ToDo, webui, repo) {
     var todo = ToDo();
-    todo.plugWebUI(webui.angular(), document);
-
-
+    todo.plugWebUI(webui.jquery(), document);
+    todo.plugRepo(repo.localStorage());
   });
 }(require));
