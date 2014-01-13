@@ -1,21 +1,20 @@
-define(['angular', 'ui/ng/UseCaseApiAdapter', 'ui/ng/todo/ToDoModule'], function (angular, UseCaseApiAdapter, ToDoModule) {
+define(['angular', 'ui/ng/todo/ToDoModule'], function (angular, ToDoModule) {
   "use strict";
 
-  return function (useCaseApi, rootElement) {
-    var appName = 'app',
-        useCaseApiAdapter = UseCaseApiAdapter(useCaseApi);
+  return function (appApiAdapter, rootElement) {
+    var appName = 'app';
 
     angular
-        .module(appName, [ToDoModule(useCaseApiAdapter)])
+        .module(appName, [ToDoModule(appApiAdapter)])
         .run(['$rootScope', '$location', function ($rootScope, $location) {
-          useCaseApiAdapter.map('list-tasks', function () {
+          appApiAdapter.addTransitionCallback('list-tasks', function () {
             return function () {
               $rootScope.$apply(function () {
                 $location.path('/list');
               });
             };
           });
-          useCaseApiAdapter.map('show-task', function () {
+          appApiAdapter.addTransitionCallback('show-task', function () {
             return function (task) {
               $rootScope.$apply(function () {
                 $location.path('/show/' + task.id);
